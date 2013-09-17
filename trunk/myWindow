@@ -1,0 +1,146 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0300 
+header_name {.h} 
+code_name {.cxx}
+decl {\#include "myWinApp.h"} {public global
+} 
+
+Function {make_window()} {open
+} {
+  Fl_Window pMain_win {
+    label 51X open selected
+    xywh {612 196 1258 713} type Double visible
+  } {
+    Fl_Menu_Bar pMain_menu {open
+      xywh {0 0 1260 20}
+    } {}
+    Fl_Group pRender_glWin {open
+      xywh {5 25 1130 680} box DOWN_BOX
+      class MyGlWindow
+    } {}
+    Fl_Button pSaveClt_bttn {
+      label {save cluster}
+      callback GenCluster
+      xywh {1140 616 115 20}
+    }
+    Fl_Group pTarget_group {open
+      xywh {1140 25 115 75} box DOWN_BOX
+    } {
+      Fl_Button pDisTar_bttn {
+        label display
+        callback DisplayTarget
+        xywh {1145 50 105 20}
+      }
+      Fl_Check_Button pSetTar_bttn {
+        label {set target}
+        callback SetTarget
+        xywh {1145 30 105 15} down_box DOWN_BOX
+      }
+      Fl_Button pClrTar_bttn {
+        label clear
+        callback ClearTarget
+        xywh {1145 75 105 20}
+      }
+    }
+    Fl_Group pSel_group {open
+      xywh {1140 125 115 375} box DOWN_BOX
+    } {
+      Fl_Button pAddSel_bttn {
+        label {add selecter}
+        callback AddSelecter
+        xywh {1145 130 105 20}
+      }
+      Fl_Check_Button pEdtSel_bttn {
+        label {edit selecter}
+        callback EditSelecter
+        xywh {1145 150 105 20} down_box DOWN_BOX
+      }
+      Fl_Group pColorFr_group {open
+        xywh {1145 170 105 90} box DOWN_BOX
+      } {
+        Fl_Input pRFr_input {
+          label {R: }
+          xywh {1175 175 70 20}
+        }
+        Fl_Input pGFr_input {
+          label {G: }
+          xywh {1175 195 70 20}
+        }
+        Fl_Input pBFr_input {
+          label {B: }
+          xywh {1175 215 70 20}
+        }
+        Fl_Input pAFr_input {
+          label {A: }
+          xywh {1175 236 70 20}
+        }
+      }
+      Fl_Group pColorTo_group {open
+        xywh {1145 290 105 115} box DOWN_BOX
+      } {
+        Fl_Input pRTo_input {
+          label {R: }
+          xywh {1175 295 70 20}
+        }
+        Fl_Input pGTo_input {
+          label {G: }
+          xywh {1175 315 70 20}
+        }
+        Fl_Input pBTo_input {
+          label {B: }
+          xywh {1175 335 70 20}
+        }
+        Fl_Input pATo_input {
+          label {A: }
+          xywh {1175 356 70 20}
+        }
+        Fl_Button pCopyColor_bttn {
+          label {copy from}
+          callback CopyColor
+          xywh {1150 380 95 20}
+        }
+      }
+      Fl_Button pDelSel_bttn {
+        label delete
+        xywh {1145 451 105 20}
+      }
+      Fl_Button pSetC_bttn {
+        label {set color}
+        callback SetColor
+        xywh {1145 428 105 20}
+      }
+      Fl_Button pTruncate_bttn {
+        label truncate
+        callback Truncate
+        xywh {1145 474 105 20}
+      }
+    }
+    Fl_Value_Slider pLevelReduce_valScl {
+      label {level reduce}
+      callback ReduceLevel
+      xywh {1140 539 115 15} type {Horz Knob} align 1 value 0.05 textsize 14
+    }
+    Fl_Button pShowRed_bttn {
+      label {show reduce}
+      callback ReduceLevel
+      xywh {1140 556 115 20}
+    }
+  }
+  code {static Fl_Menu_Item aMainItem[] = 
+{
+    {"file", 0, 0, 0, FL_SUBMENU},
+        {"load data", 0, LoadData, pRender_glWin},
+        {0},
+    {0},
+};
+pMain_menu->menu(aMainItem);} {}
+  code {pRFr_input->value("0");
+pGFr_input->value("0");
+pBFr_input->value("0");
+pAFr_input->value("0");
+
+pRTo_input->value("0");
+pGTo_input->value("0");
+pBTo_input->value("0");
+pATo_input->value("0");} {}
+} 
