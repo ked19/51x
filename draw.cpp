@@ -6,7 +6,8 @@ void DrawWin()
 	glMatrixMode(GL_MODELVIEW);		glLoadIdentity();
 
 	glLineWidth(3.0);
-	glColor4f(0.4f, 0.3f, 0.2f, 1.f);
+	//glColor4f(0.4f, 0.3f, 0.2f, 1.f);
+	glColor4f(1.f, 1.f, 1.f, 1.f);
 	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	glBegin(GL_QUADS);
 		glVertex2f(-1.f, -1.f);
@@ -133,7 +134,8 @@ void DrawCrossSection(Tex3D *pTexVal, unsigned xSliceNo, unsigned ySliceNo, unsi
 	gluLookAt(0.F, 0.F, 0.F, 0.5F, 0.5F, 0.5F, 1.F, 1.F, 0);
 
 	unsigned aSliceNo[] = {xSliceNo, ySliceNo, zSliceNo};
-	glColor4f(1.f, 1.f, 1.f, 1.f);
+	//glColor4f(1.f, 1.f, 1.f, 1.f);
+	glColor4f(0.4f, 0.3f, 0.2f, 1.f);
 	glEnable(GL_DEPTH_TEST);
 	for(unsigned i=0; i<3; i++)
 	{
