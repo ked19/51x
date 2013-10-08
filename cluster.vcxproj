@@ -67,7 +67,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\working\visionComputing\siftImplement;D:\working\diffGauss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\working\visualIR\cluster_25d;D:\working\visionComputing\siftImplement;D:\working\diffGauss;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -111,6 +111,7 @@
     <ClInclude Include="..\..\visionComputing\siftImplement\imageIO.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\layer.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\layerOperation.h" />
+    <ClInclude Include="FreeImage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\matrixOperation.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\myMath.h" />
