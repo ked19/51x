@@ -54,10 +54,10 @@
     <ClCompile Include="texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\diffGauss\layer3D.cpp">
+    <ClCompile Include="..\..\visionComputing\siftImplement\layer3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\diffGauss\volumeData.cpp">
+    <ClCompile Include="..\..\visionComputing\siftImplement\volumeData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -101,13 +101,13 @@
     <ClInclude Include="texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\diffGauss\layer3D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\diffGauss\volumeData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FreeImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\visionComputing\siftImplement\layer3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\visionComputing\siftImplement\volumeData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
