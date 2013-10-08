@@ -85,8 +85,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\diffGauss\layer3D.cpp" />
-    <ClCompile Include="..\..\diffGauss\volumeData.cpp" />
+    <ClCompile Include="..\..\visionComputing\siftImplement\layer3D.cpp" />
+    <ClCompile Include="..\..\visionComputing\siftImplement\volumeData.cpp" />
     <ClCompile Include="cluster.cpp" />
     <ClCompile Include="..\..\visionComputing\siftImplement\define.cpp" />
     <ClCompile Include="..\..\visionComputing\siftImplement\denseMatrix.cpp" />
@@ -102,8 +102,8 @@
     <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\diffGauss\layer3D.h" />
-    <ClInclude Include="..\..\diffGauss\volumeData.h" />
+    <ClInclude Include="..\..\visionComputing\siftImplement\layer3D.h" />
+    <ClInclude Include="..\..\visionComputing\siftImplement\volumeData.h" />
     <ClInclude Include="cluster.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\define.h" />
     <ClInclude Include="..\..\visionComputing\siftImplement\denseMatrix.h" />
