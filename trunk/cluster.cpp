@@ -387,6 +387,8 @@ Cluster::Cluster(string f)
 				
 				fs >> m_pData[loc].m_x
 				   >> m_pData[loc].m_y;
+				//fs >> m_pData[loc].m_x;
+				//m_pData[loc].m_y = 0;
 				m_pData[loc].m_z = rVolScl.CellVal(x, y, z);
 			}
 		}
@@ -409,6 +411,10 @@ Cluster::Cluster(string f)
 		if(m_zMin>m_pData[i].m_z)	m_zMin = m_pData[i].m_z;
 		if(m_zMax<m_pData[i].m_z)	m_zMax = m_pData[i].m_z;
 	}
+	if(m_yMin == m_yMax) {
+		m_yMin -= 0.5F;
+		m_yMax += 0.5F;
+	} else {}
 	cout << "xMin: " << m_xMin << "\txMax: " << m_xMax << endl;
 	cout << "yMin: " << m_yMin << "\tyMax: " << m_yMax << endl;
 	cout << "zMin: " << m_zMin << "\tzMax: " << m_zMax << endl;

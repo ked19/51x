@@ -990,12 +990,12 @@ void LoadData(Fl_Widget *w, void *v)
 	string strOrg = strAll.substr( strAll.find_last_of('/')+1 );
 	string strExt = strOrg.substr( strOrg.find_last_of('.')+1 );
 	string strName = strOrg.substr(0, strOrg.find_first_of('.'));
-
+	
 	delete pCluster;
 	pCluster = new Cluster(strName);	
 	vSelTop.clear();
 	vSelBot.clear();
-
+	
 	if(!strExt.compare("vol"))
 	{
 		string funCall = "..\\myLle_weight\\Release\\myLle " + strAll;
@@ -1139,7 +1139,8 @@ void GenCluster(Fl_Widget *w, void *v)
 		unsigned zF = (unsigned)(aaV[3][1] + 0.5f);
 		for(unsigned z=zN; z<=zF; z++)
 		{
-			DATA fRatio = (DATA)(zF-z+1)/(zF-zN+1);
+			//DATA fRatio = (DATA)(zF-z+1)/(zF-zN+1);
+			DATA fRatio = (DATA)(z-zN+1) / (zF-zN+1);
 			for(unsigned j=0; j<4; j++)
 			{
 				pMap[z*4+j] = (float)myMath.Interpolate_linear(aColorFr[j], aColorTo[j], fRatio);
@@ -1255,7 +1256,7 @@ void GenCluster(Fl_Widget *w, void *v)
 							for(unsigned yy=0; yy<3; yy++)
 							{
 								int yLoc = (int)y + yy - 3/2;
-								//cout << yLoc << " ";
+								//cout << yLoc << " "; 
 								if(!ppLyrMsk[i]->IsYInside(yLoc))
 									continue;
 								else {}
